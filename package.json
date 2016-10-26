@@ -1,0 +1,22 @@
+{
+  "name": "w5d3-make-a-movie-trailer-park",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelBot/w5d3-make-a-movie-trailer-park.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelBot/w5d3-make-a-movie-trailer-park/issues"
+  },
+  "homepage": "https://github.com/JoelBot/w5d3-make-a-movie-trailer-park#readme",
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

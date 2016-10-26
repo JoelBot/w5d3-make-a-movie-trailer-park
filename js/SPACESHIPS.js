@@ -11,6 +11,7 @@ var spaceship1 = {
     shipName: 'Galaxy Cruiser',
     launch: function() {
         console.log(this.shipName + ` launching to infinity and beyond at ` + this.topSpeed)
+        delayOMatic(this.shipName)
     }
 
 }
@@ -21,6 +22,7 @@ spaceship2.topSpeed = '4lyph'
 spaceship2.shipName = 'Firefly'
 spaceship2.launch = function() {
     console.log(spaceship2.shipName + ` launching to infinity and beyond at ` + spaceship2.topSpeed)
+    delayOMatic(this.shipName)
 }
 spaceship2.launch()
 
@@ -29,6 +31,7 @@ var SpaceshipThree = function() {
     this.shipName = 'Deathstar'
     this.launch = function() {
         console.log(this.shipName + ` launching to infinity and beyond at ` + this.topSpeed)
+        delayOMatic(this.shipName)
     }
 }
 var spaceship3 = new SpaceshipThree()
@@ -42,7 +45,7 @@ class SpaceshipFour {
     }
     launch() {
         console.log(this.shipName + ' launching to infinity and beyond at ' + this.topSpeed)
-        // console.log(`${shipName} launching to infinity and beyond at ${topSpeed}`)
+        delayOMatic(this.shipName)
     }
 }
 
@@ -85,36 +88,28 @@ spaceship4_clone1.topSpeed = '200lyph'
 spaceship4_clone1.shipName = 'Fancy Pants'
 spaceship4_clone1.launch()
 
-SpaceshipFour.prototype.landing = setTimeout(function() {
-    timeout = setTimeout(message, 3000)
-    function message() {
-        console.log('Landing Successful')
-    }
-}, 3000)
-spaceship4.launch()
+function delayOMatic (spaceShipName) {
+    setTimeout(function() {
+        console.log(spaceShipName + ' has successfully landed!')
+    }, 3000)
+}
 // end Andventure
 
 // Epix
-// class Launcher {
-//     constructor() {
-//
-//     }
-//     launchShip() {
-//
-//         var starshipContainer = document.createElement('div')
-//         starshipContainer.classList.add('class','container')
-//         var starshipCol = document.createElement('div')
-//         starshipCol.classList.add('class','col-sm-3')
-//         starshipCol.setAttribute('style','border: 1px solid green')
-//         // var starshipContainer = document.createElement('div')
-//         // starshipContainer.addClass('container')
-//
-//         // var starship = document.createElement('')
-//         document.body.appendChild(starshipContainer)
-//         starshipContainer.appendChild(starshipCol)
-//
-//     }
-// }
+class Launcher {
+    constructor(launchHeight) {
+        setTimeout(function launchHeight() {
+            document.getElementById('spaceship').classList.add('animated','bounceOutUp')
+        }, 5000)
+        setTimeout(function launchHeight() {
+            document.getElementById('spaceship').classList.remove('bounceOutUp')
+            document.getElementById('spaceship').classList.add('animated','bounceInDown')
+        }, 10000)
+    }
+}
+
+var theLauncher = new Launcher('100px')
+theLauncher
 //
 // var launcher = new Launcher()
 // launcher.launchShip()
